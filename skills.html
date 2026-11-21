@@ -1,0 +1,838 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Skills | EclipsePrince</title>
+
+    <meta name="description" content="Explore the technical skills, interests and development journey of EclipsePrince.">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           SKILLS PAGE
+        ========================= */
+
+        .skills-hero {
+            min-height: 55vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 8% 70px;
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(109, 40, 217, 0.18),
+                    transparent 60%
+                );
+        }
+
+        .skills-hero-content {
+            max-width: 850px;
+        }
+
+        .skills-label {
+            color: #A78BFA;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .skills-hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(36px, 6vw, 68px);
+            color: #F5F5F5;
+            margin-bottom: 20px;
+        }
+
+        .skills-hero h1 span {
+            color: #A78BFA;
+        }
+
+        .skills-hero p {
+            color: #B8B8C5;
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        /* INTRODUCTION */
+
+        .skills-intro {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 8% 70px;
+            text-align: center;
+        }
+
+        .skills-intro h2 {
+            font-family: 'Cinzel', serif;
+            color: #FFFFFF;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .skills-intro p {
+            color: #A7A7B5;
+            line-height: 1.9;
+            font-size: 15px;
+        }
+
+        /* SKILLS GRID */
+
+        .skills-section {
+            padding: 70px 8%;
+            background: #0D0B12;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-heading .eyebrow {
+            color: #A78BFA;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .section-heading h2 {
+            font-family: 'Cinzel', serif;
+            color: #FFFFFF;
+            font-size: clamp(26px, 4vw, 38px);
+            margin-bottom: 15px;
+        }
+
+        .section-heading p {
+            color: #92909D;
+            font-size: 14px;
+        }
+
+        .technical-skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+            max-width: 1150px;
+            margin: 0 auto;
+        }
+
+        .technical-skill-card {
+            background: #15121C;
+            border: 1px solid rgba(167, 139, 250, 0.18);
+            border-radius: 12px;
+            padding: 30px;
+            transition: 0.3s ease;
+        }
+
+        .technical-skill-card:hover {
+            transform: translateY(-6px);
+            border-color: #7C3AED;
+            box-shadow: 0 12px 35px rgba(109, 40, 217, 0.12);
+        }
+
+        .skill-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(109, 40, 217, 0.15);
+            border-radius: 10px;
+            color: #A78BFA;
+            font-size: 23px;
+            margin-bottom: 22px;
+        }
+
+        .technical-skill-card h3 {
+            color: #FFFFFF;
+            font-family: 'Cinzel', serif;
+            font-size: 19px;
+            margin-bottom: 14px;
+        }
+
+        .technical-skill-card p {
+            color: #A7A7B5;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        .skill-tags span {
+            background: rgba(109, 40, 217, 0.12);
+            border: 1px solid rgba(167, 139, 250, 0.2);
+            color: #C4B5FD;
+            padding: 7px 11px;
+            border-radius: 5px;
+            font-size: 11px;
+        }
+
+        /* ADDITIONAL SKILLS */
+
+        .additional-skills {
+            padding: 80px 8%;
+        }
+
+        .additional-skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            max-width: 1150px;
+            margin: 0 auto;
+        }
+
+        .additional-skill-card {
+            background: #111019;
+            border: 1px solid #292333;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .additional-skill-card h3 {
+            color: #FFFFFF;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .additional-skill-card p {
+            color: #9996A5;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* LEARNING JOURNEY */
+
+        .learning-section {
+            padding: 80px 8%;
+            background: #0D0B12;
+        }
+
+        .learning-content {
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .learning-content h2 {
+            font-family: 'Cinzel', serif;
+            color: #FFFFFF;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .learning-content > p {
+            color: #A7A7B5;
+            line-height: 1.9;
+            font-size: 14px;
+            margin-bottom: 35px;
+        }
+
+        .learning-list {
+            display: grid;
+            gap: 15px;
+            text-align: left;
+        }
+
+        .learning-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            background: #15121C;
+            border: 1px solid #292333;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .learning-item .number {
+            color: #A78BFA;
+            font-family: 'Cinzel', serif;
+            font-size: 20px;
+        }
+
+        .learning-item h3 {
+            color: #FFFFFF;
+            font-size: 15px;
+            margin-bottom: 7px;
+        }
+
+        .learning-item p {
+            color: #9996A5;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* CALL TO ACTION */
+
+        .skills-cta {
+            padding: 90px 8%;
+            text-align: center;
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(109, 40, 217, 0.15),
+                    transparent 65%
+                );
+        }
+
+        .skills-cta h2 {
+            font-family: 'Cinzel', serif;
+            color: #FFFFFF;
+            font-size: clamp(25px, 4vw, 38px);
+            margin-bottom: 18px;
+        }
+
+        .skills-cta p {
+            color: #A7A7B5;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .skills-cta a {
+            display: inline-block;
+            text-decoration: none;
+            color: #FFFFFF;
+            background: #6D28D9;
+            padding: 14px 28px;
+            border-radius: 5px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: 0.3s ease;
+        }
+
+        .skills-cta a:hover {
+            background: #7C3AED;
+            transform: translateY(-3px);
+        }
+
+        /* RESPONSIVE DESIGN */
+
+        @media (max-width: 800px) {
+
+            .technical-skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .additional-skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 550px) {
+
+            .skills-hero {
+                min-height: 45vh;
+                padding-top: 90px;
+            }
+
+            .additional-skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .technical-skill-card {
+                padding: 23px;
+            }
+
+            .skills-intro h2 {
+                font-size: 23px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <header class="site-header">
+
+        <div class="brand">
+
+            <a href="index.html">
+                <img
+                    src="images/eclipseprince-logo.png"
+                    alt="EclipsePrince Logo"
+                >
+                <span>ECLIPSEPRINCE</span>
+            </a>
+
+        </div>
+
+        <button
+            class="menu-toggle"
+            aria-label="Open navigation"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+        <nav class="nav-links">
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html" class="active">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================= -->
+
+    <section class="skills-hero">
+
+        <div class="skills-hero-content">
+
+            <div class="skills-label">
+                Technical Capabilities
+            </div>
+
+            <h1>
+                Skills & <span>Expertise.</span>
+            </h1>
+
+            <p>
+                A growing foundation in information technology,
+                technical support and web development, driven by
+                curiosity, practical experience and continuous learning.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         INTRODUCTION
+    ========================= -->
+
+    <section class="skills-intro">
+
+        <h2>Knowledge Through Practice.</h2>
+
+        <p>
+            My technical journey is built around solving problems,
+            understanding technology and developing practical skills.
+            From supporting computer systems and troubleshooting
+            technical issues to building websites and exploring
+            cybersecurity, I am committed to becoming a well-rounded
+            IT professional.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         TECHNICAL SKILLS
+    ========================= -->
+
+    <section class="skills-section">
+
+        <div class="section-heading">
+
+            <div class="eyebrow">
+                What I Work With
+            </div>
+
+            <h2>Technical Skills</h2>
+
+            <p>
+                Areas of practical experience and ongoing development.
+            </p>
+
+        </div>
+
+
+        <div class="technical-skills-grid">
+
+
+            <!-- IT SUPPORT -->
+
+            <div class="technical-skill-card">
+
+                <div class="skill-icon">⌘</div>
+
+                <h3>IT Support</h3>
+
+                <p>
+                    Practical experience assisting users with
+                    technical issues, configuring computer systems
+                    and troubleshooting hardware and software problems.
+                </p>
+
+                <div class="skill-tags">
+                    <span>Windows Installation</span>
+                    <span>Hardware Troubleshooting</span>
+                    <span>Software Configuration</span>
+                    <span>Technical Support</span>
+                    <span>Printer Configuration</span>
+                </div>
+
+            </div>
+
+
+            <!-- NETWORKING -->
+
+            <div class="technical-skill-card">
+
+                <div class="skill-icon">⌁</div>
+
+                <h3>Networking</h3>
+
+                <p>
+                    Developing knowledge of computer networks,
+                    connectivity troubleshooting and the fundamentals
+                    of network communication.
+                </p>
+
+                <div class="skill-tags">
+                    <span>IP Configuration</span>
+                    <span>DNS Fundamentals</span>
+                    <span>Network Troubleshooting</span>
+                    <span>Connectivity Testing</span>
+                    <span>TCP/IP Fundamentals</span>
+                </div>
+
+            </div>
+
+
+            <!-- WEB DEVELOPMENT -->
+
+            <div class="technical-skill-card">
+
+                <div class="skill-icon">〈/〉</div>
+
+                <h3>Web Development</h3>
+
+                <p>
+                    Building personal and practical web projects
+                    using front-end technologies, with a focus on
+                    structure, design and functionality.
+                </p>
+
+                <div class="skill-tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>Responsive Design</span>
+                    <span>GitHub</span>
+                </div>
+
+            </div>
+
+
+            <!-- CYBERSECURITY -->
+
+            <div class="technical-skill-card">
+
+                <div class="skill-icon">◈</div>
+
+                <h3>Cybersecurity</h3>
+
+                <p>
+                    Exploring cybersecurity concepts and developing
+                    foundational knowledge of system security,
+                    vulnerabilities and defensive practices.
+                </p>
+
+                <div class="skill-tags">
+                    <span>Security Fundamentals</span>
+                    <span>Linux Fundamentals</span>
+                    <span>Virtual Machines</span>
+                    <span>System Security</span>
+                    <span>Cybersecurity Labs</span>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ADDITIONAL SKILLS
+    ========================= -->
+
+    <section class="additional-skills">
+
+        <div class="section-heading">
+
+            <div class="eyebrow">
+                Beyond Technical Knowledge
+            </div>
+
+            <h2>Professional Skills</h2>
+
+            <p>
+                The qualities I bring to technical environments.
+            </p>
+
+        </div>
+
+
+        <div class="additional-skills-grid">
+
+
+            <div class="additional-skill-card">
+
+                <h3>Problem Solving</h3>
+
+                <p>
+                    Approaching technical challenges logically
+                    and working towards practical solutions.
+                </p>
+
+            </div>
+
+
+            <div class="additional-skill-card">
+
+                <h3>Communication</h3>
+
+                <p>
+                    Explaining technical issues clearly and
+                    assisting users with their technology needs.
+                </p>
+
+            </div>
+
+
+            <div class="additional-skill-card">
+
+                <h3>Adaptability</h3>
+
+                <p>
+                    Learning new technologies and adjusting
+                    to changing technical environments.
+                </p>
+
+            </div>
+
+
+            <div class="additional-skill-card">
+
+                <h3>Continuous Learning</h3>
+
+                <p>
+                    Building knowledge through research,
+                    experimentation and practical projects.
+                </p>
+
+            </div>
+
+
+            <div class="additional-skill-card">
+
+                <h3>Attention to Detail</h3>
+
+                <p>
+                    Taking a structured approach to technical
+                    tasks and troubleshooting.
+                </p>
+
+            </div>
+
+
+            <div class="additional-skill-card">
+
+                <h3>Analytical Thinking</h3>
+
+                <p>
+                    Breaking down problems and examining
+                    possible causes before taking action.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LEARNING JOURNEY
+    ========================= -->
+
+    <section class="learning-section">
+
+        <div class="learning-content">
+
+            <div class="section-heading">
+
+                <div class="eyebrow">
+                    Always Evolving
+                </div>
+
+                <h2>Currently Developing</h2>
+
+            </div>
+
+            <p>
+                Technology never stands still, and neither does
+                my learning journey. I am focused on strengthening
+                my technical foundation while developing skills
+                that support my long-term career goals.
+            </p>
+
+
+            <div class="learning-list">
+
+
+                <div class="learning-item">
+
+                    <div class="number">01</div>
+
+                    <div>
+
+                        <h3>Advanced IT Support Knowledge</h3>
+
+                        <p>
+                            Improving my troubleshooting approach,
+                            operating system knowledge and ability
+                            to resolve technical issues.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="learning-item">
+
+                    <div class="number">02</div>
+
+                    <div>
+
+                        <h3>Web Development Projects</h3>
+
+                        <p>
+                            Creating practical websites and
+                            strengthening my HTML, CSS and
+                            JavaScript development skills.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="learning-item">
+
+                    <div class="number">03</div>
+
+                    <div>
+
+                        <h3>Networking & Systems</h3>
+
+                        <p>
+                            Building a deeper understanding
+                            of network infrastructure, operating
+                            systems and computer environments.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="learning-item">
+
+                    <div class="number">04</div>
+
+                    <div>
+
+                        <h3>Cybersecurity</h3>
+
+                        <p>
+                            Developing cybersecurity knowledge
+                            through structured learning and
+                            safe, practical laboratory exercises.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CALL TO ACTION
+    ========================= -->
+
+    <section class="skills-cta">
+
+        <h2>Let's Build Something.</h2>
+
+        <p>
+            Interested in my work or want to connect?
+            Explore my projects or get in touch.
+        </p>
+
+        <a href="projects.html">
+            EXPLORE MY PROJECTS
+        </a>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer class="site-footer">
+
+        <p>
+            © <span id="year"></span> EclipsePrince.
+            Beyond the ordinary. Built to stand apart.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

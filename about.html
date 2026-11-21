@@ -1,0 +1,984 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#08070d">
+
+    <meta name="description"
+          content="Discover the person behind EclipsePrince, an IT Support professional, aspiring developer and cybersecurity enthusiast.">
+
+    <title>About Me | EclipsePrince</title>
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Cinzel:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- MAIN STYLESHEET -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/script.js" defer></script>
+
+    <!-- ABOUT PAGE STYLES -->
+
+    <style>
+
+        /* ABOUT PAGE HERO */
+
+        .about-hero {
+            min-height: 480px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 90px 10%;
+            background:
+                radial-gradient(
+                    ellipse at 85% 50%,
+                    #35145a66,
+                    transparent 55%
+                );
+        }
+
+        .about-hero-content {
+            max-width: 850px;
+        }
+
+        .about-hero h1 {
+            font: 600 clamp(42px, 6vw, 68px)/1.2 "Cinzel", serif;
+            margin: 20px 0;
+        }
+
+        .about-hero p {
+            max-width: 650px;
+            color: #aaa3b5;
+            font-size: 16px;
+        }
+
+        /* INTRODUCTION */
+
+        .about-introduction {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+         .about-portrait {
+              width: 100%;
+              max-width: 380px;
+              margin: 0 auto;
+              overflow: hidden;
+              border: 1px solid #6D28D9;
+              border-radius: 12px;
+              box-shadow: 0 0 30px rgba(109, 40, 217, 0.2);
+          }
+
+          .profile-photo {
+              display: block;
+              width: 100%;
+              height: 450px;
+              object-fit: cover;
+              object-position: center;
+              filter: grayscale(15%);
+              transition: transform 0.4s ease;
+          }
+
+            .profile-photo:hover {
+                transform: scale(1.04);
+            }
+        .about-description h2 {
+            font: 600 32px "Cinzel", serif;
+            margin-top: 0;
+        }
+
+        .about-description p {
+            color: #a49cac;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        /* PERSONAL PHILOSOPHY */
+
+        .philosophy-section {
+            text-align: center;
+            padding: 100px 10%;
+            border-top: 1px solid #ffffff12;
+            border-bottom: 1px solid #ffffff12;
+            background:
+                radial-gradient(
+                    ellipse at center,
+                    #28113e66,
+                    transparent 70%
+                );
+        }
+
+        .philosophy-section h2 {
+            font: 600 clamp(28px, 4vw, 43px) "Cinzel", serif;
+            max-width: 850px;
+            margin: 20px auto;
+        }
+
+        .philosophy-section p {
+            color: #a49bac;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        /* JOURNEY SECTION */
+
+        .journey-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .journey-card {
+            padding: 30px;
+            background: linear-gradient(
+                145deg,
+                #15111e,
+                #0d0b12
+            );
+            border: 1px solid #ffffff14;
+            transition: .25s;
+        }
+
+        .journey-card:hover {
+            transform: translateY(-5px);
+            border-color: #9561d866;
+        }
+
+        .journey-number {
+            color: #ad82e7;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+        .journey-card h3 {
+            font: 600 20px "Cinzel", serif;
+            margin: 15px 0;
+        }
+
+        .journey-card p {
+            color: #a39bab;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        /* CAREER GOALS */
+
+        .career-section {
+            padding: 100px 10%;
+            background: #0d0a13;
+            border-top: 1px solid #ffffff12;
+        }
+
+        .career-content {
+            max-width: 800px;
+        }
+
+        .career-content h2 {
+            font: 600 36px "Cinzel", serif;
+        }
+
+        .career-content p {
+            color: #a49bac;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .career-list {
+            margin-top: 30px;
+            display: grid;
+            gap: 15px;
+        }
+
+        .career-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: #15111e;
+            border: 1px solid #ffffff12;
+            color: #d9d0e4;
+            font-size: 13px;
+        }
+
+        .career-item span {
+            color: #b78af1;
+            font-size: 18px;
+        }
+
+        /* PERSONAL VALUES */
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .value-card {
+            padding: 25px;
+            border: 1px solid #ffffff15;
+            background: #100e16;
+            text-align: center;
+        }
+
+        .value-card h3 {
+            font: 600 17px "Cinzel", serif;
+            color: #c4a0f2;
+        }
+
+        .value-card p {
+            font-size: 12px;
+            color: #9991a3;
+        }
+
+        /* ABOUT CTA */
+
+        .about-cta {
+            text-align: center;
+            padding: 100px 10%;
+            border-top: 1px solid #ffffff12;
+        }
+
+        .about-cta h2 {
+            font: 600 38px "Cinzel", serif;
+        }
+
+        .about-cta p {
+            color: #a49bac;
+            margin-bottom: 30px;
+        }
+
+        /* RESPONSIVE DESIGN */
+
+        @media(max-width: 900px) {
+
+            .about-hero {
+                padding: 80px 7%;
+            }
+
+            .about-introduction {
+                gap: 30px;
+            }
+
+            .career-section {
+                padding: 80px 7%;
+            }
+
+        }
+
+        @media(max-width: 650px) {
+
+            .about-hero {
+                min-height: 400px;
+                padding: 70px 6%;
+            }
+
+            .about-introduction {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .about-portrait {
+                min-height: 260px;
+            }
+
+            .journey-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .philosophy-section,
+            .career-section,
+            .about-cta {
+                padding: 75px 6%;
+            }
+
+            .about-description h2,
+            .career-content h2,
+            .about-cta h2 {
+                font-size: 28px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- BACKGROUND EFFECTS -->
+
+    <div class="ambient ambient-one"></div>
+
+    <div class="ambient ambient-two"></div>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header class="site-header">
+
+        <a class="brand" href="index.html">
+
+            <img src="images/eclipseprince-logo.png"
+                 alt="EclipsePrince Logo">
+
+            <span>
+                ECLIPSE<span class="purple">PRINCE</span>
+            </span>
+
+        </a>
+
+
+        <button class="menu-toggle"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
+            ☰
+
+        </button>
+
+
+        <nav class="nav-links"
+             aria-label="Main navigation">
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="skills.html">Skills</a>
+
+            <a href="projects.html">Projects</a>
+
+            <a href="contact.html"
+               class="nav-contact">
+
+                Contact
+
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- =========================
+             ABOUT HERO
+        ========================== -->
+
+        <section class="about-hero">
+
+            <div class="about-hero-content">
+
+                <p class="eyebrow">
+
+                    01 / GET TO KNOW ME
+
+                </p>
+
+
+                <h1>
+
+                    The person behind
+
+                    <span class="gradient-text">
+                        EclipsePrince.
+                    </span>
+
+                </h1>
+
+
+                <p>
+
+                    A technology enthusiast driven by
+                    curiosity, continuous learning and
+                    the desire to build something meaningful.
+
+                    This is my journey through IT,
+                    development and cybersecurity.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PERSONAL INTRODUCTION
+        ========================== -->
+
+        <section class="section content-section">
+
+            <div class="about-introduction">
+
+
+                <!-- BRAND LOGO -->
+
+                
+                <div class="about-portrait">
+                    <img
+                        src="images/file_00000000cfe88208b1ed5e44e0b7ff38.png"
+                        alt="Portrait of EclipsePrince"
+                        class="profile-photo"
+                    >
+                </div>
+
+              
+                <!-- PERSONAL INFORMATION -->
+
+                <div class="about-description">
+
+                    <p class="eyebrow">
+
+                        02 / WHO I AM
+
+                    </p>
+
+
+                    <h2>
+
+                        Driven by curiosity.
+
+                        <br>
+
+                        Focused on growth.
+
+                    </h2>
+
+
+                    <p>
+
+                        I am an IT Support professional
+                        with an interest in technology,
+                        problem-solving and building
+                        practical digital solutions.
+
+                    </p>
+
+
+                    <p>
+
+                        My professional experience has
+                        helped me develop an understanding
+                        of computer systems, troubleshooting,
+                        technical support and assisting
+                        users with technology-related
+                        challenges.
+
+                    </p>
+
+
+                    <p>
+
+                        Outside my professional work,
+                        I am developing my skills in
+                        web development and exploring
+                        the field of cybersecurity.
+
+                    </p>
+
+
+                    <p>
+
+                        I believe that technical ability
+                        is developed through practice,
+                        consistency and a willingness
+                        to keep learning.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PERSONAL PHILOSOPHY
+        ========================== -->
+
+        <section class="philosophy-section">
+
+            <p class="eyebrow">
+
+                03 / MY PHILOSOPHY
+
+            </p>
+
+
+            <h2>
+
+                "Never stop learning.
+                Never stop building.
+                Never stop evolving."
+
+            </h2>
+
+
+            <p>
+
+                I believe growth comes from challenging
+                yourself, embracing new opportunities
+                and remaining curious about what
+                is possible.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             PROFESSIONAL JOURNEY
+        ========================== -->
+
+        <section class="section content-section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+
+                    04 / MY JOURNEY
+
+                </p>
+
+
+                <h2>
+
+                    Building my
+
+                    <span class="gradient-text">
+                        foundation.
+                    </span>
+
+                </h2>
+
+
+                <p class="section-lead">
+
+                    The areas shaping my professional
+                    development and technical journey.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="journey-grid">
+
+
+                <!-- EXPERIENCE -->
+
+                <article class="journey-card">
+
+                    <span class="journey-number">
+
+                        01 / EXPERIENCE
+
+                    </span>
+
+
+                    <h3>
+
+                        IT Support
+
+                    </h3>
+
+
+                    <p>
+
+                        Developing practical experience
+                        in technical support, Windows
+                        environments, hardware and software
+                        troubleshooting, printer configuration
+                        and user assistance.
+
+                    </p>
+
+                </article>
+
+
+
+                <!-- DEVELOPMENT -->
+
+                <article class="journey-card">
+
+                    <span class="journey-number">
+
+                        02 / DEVELOPMENT
+
+                    </span>
+
+
+                    <h3>
+
+                        Web Development
+
+                    </h3>
+
+
+                    <p>
+
+                        Learning to create websites and
+                        digital experiences using HTML,
+                        CSS and JavaScript. Building
+                        personal projects to strengthen
+                        my practical development skills.
+
+                    </p>
+
+                </article>
+
+
+
+                <!-- NETWORKING -->
+
+                <article class="journey-card">
+
+                    <span class="journey-number">
+
+                        03 / TECHNICAL KNOWLEDGE
+
+                    </span>
+
+
+                    <h3>
+
+                        Networking
+
+                    </h3>
+
+
+                    <p>
+
+                        Exploring networking fundamentals,
+                        IP addressing, DNS, connectivity
+                        troubleshooting and how devices
+                        communicate across networks.
+
+                    </p>
+
+                </article>
+
+
+
+                <!-- CYBERSECURITY -->
+
+                <article class="journey-card">
+
+                    <span class="journey-number">
+
+                        04 / FUTURE DIRECTION
+
+                    </span>
+
+
+                    <h3>
+
+                        Cybersecurity
+
+                    </h3>
+
+
+                    <p>
+
+                        Working towards deeper knowledge
+                        of cybersecurity, security
+                        fundamentals, defensive practices
+                        and practical laboratory exercises.
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CAREER OBJECTIVES
+        ========================== -->
+
+        <section class="career-section">
+
+            <div class="career-content">
+
+                <p class="eyebrow">
+
+                    05 / WHERE I'M HEADING
+
+                </p>
+
+
+                <h2>
+
+                    Focused on the
+
+                    <span class="gradient-text">
+                        future.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    My long-term ambition is to develop
+                    into a skilled cybersecurity
+                    professional.
+
+                    I see IT Support as an important
+                    foundation for understanding
+                    infrastructure, operating systems,
+                    networks and the technical challenges
+                    organisations face.
+
+                </p>
+
+
+                <p>
+
+                    I intend to continue strengthening
+                    my technical foundation, developing
+                    practical projects and pursuing
+                    professional certifications as
+                    I progress.
+
+                </p>
+
+
+
+                <div class="career-list">
+
+
+                    <div class="career-item">
+
+                        <span>✦</span>
+
+                        Strengthen my IT Support and
+                        troubleshooting capabilities.
+
+                    </div>
+
+
+                    <div class="career-item">
+
+                        <span>✦</span>
+
+                        Develop practical web development
+                        projects.
+
+                    </div>
+
+
+                    <div class="career-item">
+
+                        <span>✦</span>
+
+                        Build networking and systems
+                        administration knowledge.
+
+                    </div>
+
+
+                    <div class="career-item">
+
+                        <span>✦</span>
+
+                        Develop cybersecurity skills
+                        through structured learning
+                        and safe practical labs.
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PERSONAL VALUES
+        ========================== -->
+
+        <section class="section content-section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+
+                    06 / WHAT DRIVES ME
+
+                </p>
+
+
+                <h2>
+
+                    Principles that
+
+                    <span class="gradient-text">
+                        guide me.
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+
+            <div class="values-grid">
+
+
+                <article class="value-card">
+
+                    <h3>Curiosity</h3>
+
+                    <p>
+
+                        Asking questions, exploring
+                        technology and understanding
+                        how things work.
+
+                    </p>
+
+                </article>
+
+
+
+                <article class="value-card">
+
+                    <h3>Consistency</h3>
+
+                    <p>
+
+                        Making progress through
+                        continuous learning and
+                        practical application.
+
+                    </p>
+
+                </article>
+
+
+
+                <article class="value-card">
+
+                    <h3>Individuality</h3>
+
+                    <p>
+
+                        Developing my own perspective,
+                        embracing originality and
+                        building a distinctive identity.
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CONTACT CTA
+        ========================== -->
+
+        <section class="about-cta">
+
+            <p class="eyebrow">
+
+                07 / LET'S CONNECT
+
+            </p>
+
+
+            <h2>
+
+                Every journey starts
+
+                <span class="gradient-text">
+                    somewhere.
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                I'm always interested in connecting
+                with people who share an interest
+                in technology, innovation and growth.
+
+            </p>
+
+
+            <a href="contact.html"
+               class="button button-primary">
+
+                Get in touch
+
+                <span>↗</span>
+
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="site-footer">
+      <a class="footer-brand" href="#index.html">ECLIPSE<span class="purple">PRINCE</span></a>
+      <span>© <span id="year"></span> EclipsePrince. Built with intention.</span>
+      <a href="about.html" class="back-top">BACK TO TOP ↑</a>
+    </footer>    
+</body>
+</html>

@@ -1,0 +1,777 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | EclipsePrince</title>
+
+    <meta name="description" content="Get in touch with EclipsePrince for professional connections, opportunities and collaboration.">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        /* =========================
+           CONTACT HERO
+        ========================= */
+
+        .contact-hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 8% 70px;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(109, 40, 217, 0.18),
+                    transparent 60%
+                );
+        }
+
+        .contact-hero-content {
+            max-width: 800px;
+        }
+
+        .contact-label {
+            color: #A78BFA;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .contact-hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(36px, 6vw, 68px);
+            color: #F5F5F5;
+            margin-bottom: 20px;
+        }
+
+        .contact-hero h1 span {
+            color: #A78BFA;
+        }
+
+        .contact-hero p {
+            color: #B8B8C5;
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+
+        /* =========================
+           CONTACT SECTION
+        ========================= */
+
+        .contact-section {
+            padding: 80px 8%;
+            background: #0D0B12;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 60px;
+            max-width: 1150px;
+            margin: 0 auto;
+        }
+
+
+        /* =========================
+           CONTACT INFORMATION
+        ========================= */
+
+        .contact-information h2 {
+            font-family: 'Cinzel', serif;
+            color: #FFFFFF;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .contact-information > p {
+            color: #A7A7B5;
+            font-size: 14px;
+            line-height: 1.9;
+            margin-bottom: 35px;
+        }
+
+        .contact-details {
+            display: grid;
+            gap: 18px;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 17px;
+            padding: 18px;
+            background: #15121C;
+            border: 1px solid rgba(167, 139, 250, 0.16);
+            border-radius: 9px;
+            transition: 0.3s ease;
+        }
+
+        .contact-detail:hover {
+            border-color: #7C3AED;
+            transform: translateX(5px);
+        }
+
+        .contact-icon {
+            min-width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(109, 40, 217, 0.16);
+            border-radius: 8px;
+            color: #A78BFA;
+            font-size: 20px;
+        }
+
+        .contact-detail h3 {
+            color: #FFFFFF;
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        .contact-detail a {
+            color: #A7A7B5;
+            font-size: 13px;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+            transition: 0.3s ease;
+        }
+
+        .contact-detail a:hover {
+            color: #A78BFA;
+        }
+
+
+        /* =========================
+           SOCIAL LINKS
+        ========================= */
+
+        .social-section {
+            margin-top: 35px;
+        }
+
+        .social-section h3 {
+            color: #FFFFFF;
+            font-family: 'Cinzel', serif;
+            font-size: 17px;
+            margin-bottom: 17px;
+        }
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            color: #C4B5FD;
+            text-decoration: none;
+            border: 1px solid rgba(167, 139, 250, 0.3);
+            padding: 10px 16px;
+            border-radius: 5px;
+            font-size: 12px;
+            transition: 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #6D28D9;
+            border-color: #6D28D9;
+            color: #FFFFFF;
+        }
+
+
+        /* =========================
+           CONTACT FORM
+        ========================= */
+
+        .contact-form-container {
+            background: #15121C;
+            border: 1px solid rgba(167, 139, 250, 0.18);
+            border-radius: 12px;
+            padding: 35px;
+        }
+
+        .contact-form-container h2 {
+            font-family: 'Cinzel', serif;
+            color: #FFFFFF;
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .contact-form-container > p {
+            color: #9996A5;
+            font-size: 13px;
+            line-height: 1.8;
+            margin-bottom: 28px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 19px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+        }
+
+        .form-group label {
+            color: #D4D0DE;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            background: #0D0B12;
+            border: 1px solid #393142;
+            border-radius: 6px;
+            color: #FFFFFF;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            outline: none;
+            transition: 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #8B5CF6;
+            box-shadow: 0 0 0 2px rgba(109, 40, 217, 0.12);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #777381;
+        }
+
+        .submit-button {
+            padding: 15px 25px;
+            background: #6D28D9;
+            border: none;
+            border-radius: 5px;
+            color: #FFFFFF;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background: #7C3AED;
+            transform: translateY(-3px);
+        }
+
+        .form-note {
+            color: #777381;
+            font-size: 11px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           CONTACT CTA
+        ========================= */
+
+        .contact-cta {
+            padding: 90px 8%;
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(109, 40, 217, 0.15),
+                    transparent 65%
+                );
+        }
+
+        .contact-cta h2 {
+            font-family: 'Cinzel', serif;
+            color: #FFFFFF;
+            font-size: clamp(25px, 4vw, 38px);
+            margin-bottom: 18px;
+        }
+
+        .contact-cta p {
+            color: #A7A7B5;
+            font-size: 14px;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+        }
+
+        @media (max-width: 550px) {
+
+            .contact-hero {
+                min-height: 42vh;
+                padding-top: 90px;
+            }
+
+            .contact-form-container {
+                padding: 23px;
+            }
+
+            .contact-information h2 {
+                font-size: 24px;
+            }
+
+            .contact-form-container h2 {
+                font-size: 22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <header class="site-header">
+
+        <div class="brand">
+
+            <a href="index.html">
+
+                <img
+                    src="images/eclipseprince-logo.png"
+                    alt="EclipsePrince Logo"
+                >
+
+                <span>ECLIPSEPRINCE</span>
+
+            </a>
+
+        </div>
+
+
+        <button
+            class="menu-toggle"
+            aria-label="Open navigation"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+
+        <nav class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="skills.html">Skills</a>
+
+            <a href="projects.html">Projects</a>
+
+            <a href="contact.html" class="active">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================= -->
+
+    <section class="contact-hero">
+
+        <div class="contact-hero-content">
+
+            <div class="contact-label">
+                Let's Connect
+            </div>
+
+            <h1>
+                Get In <span>Touch.</span>
+            </h1>
+
+            <p>
+                Have an opportunity, a project idea or simply want
+                to connect? I would be happy to hear from you.
+
+                Let's start a conversation.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT INFORMATION & FORM
+    ========================= -->
+
+    <section class="contact-section">
+
+        <div class="contact-container">
+
+
+            <!-- CONTACT INFORMATION -->
+
+            <div class="contact-information">
+
+                <h2>Let's Start a Conversation.</h2>
+
+                <p>
+                    I am open to professional connections,
+                    learning opportunities, collaboration
+                    and conversations about technology.
+
+                    Feel free to reach out using the details
+                    or contact form provided.
+                </p>
+
+
+                <div class="contact-details">
+
+
+                    <!-- EMAIL -->
+
+                    <div class="contact-detail">
+
+                        <div class="contact-icon">
+                            ✉
+                        </div>
+
+                        <div>
+
+                            <h3>Email</h3>
+
+                            <a href="mailto:EclipsePrince@gmail.com">
+                                EclipsePrince@gmail.com
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LOCATION -->
+
+                    <div class="contact-detail">
+
+                        <div class="contact-icon">
+                            ◉
+                        </div>
+
+                        <div>
+
+                            <h3>Location</h3>
+
+                            <span style="color:#A7A7B5;font-size:13px;">
+                                South Africa
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- AVAILABILITY -->
+
+                    <div class="contact-detail">
+
+                        <div class="contact-icon">
+                            ↗
+                        </div>
+
+                        <div>
+
+                            <h3>Professional Interests</h3>
+
+                            <span style="color:#A7A7B5;font-size:13px;">
+                                IT Support · Web Development · Technology
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- SOCIAL LINKS -->
+
+                <div class="social-section">
+
+                    <h3>Find Me Online</h3>
+
+                    <div class="social-links">
+
+                        <a
+                            href="https://github.com/YOUR_USERNAME"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub
+                        </a>
+
+                        <a
+                            href="https://www.linkedin.com/in/YOUR_LINKEDIN/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            LinkedIn
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CONTACT FORM -->
+
+            <div class="contact-form-container">
+
+                <h2>Send a Message.</h2>
+
+                <p>
+                    Fill in the details below.
+                    Your email application will open with
+                    your message prepared for sending.
+                </p>
+
+
+                <form class="contact-form" id="contactForm">
+
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Your Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Your Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="subject">
+                            Subject
+                        </label>
+
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            placeholder="What is this about?"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Your Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Write your message here..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="submit-button"
+                    >
+                        PREPARE EMAIL →
+                    </button>
+
+
+                    <p class="form-note">
+                        This form opens your default email application.
+                        It does not send messages directly from the website.
+                    </p>
+
+
+                </form>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CALL TO ACTION
+    ========================= -->
+
+    <section class="contact-cta">
+
+        <h2>Beyond the Ordinary.</h2>
+
+        <p>
+            Built through curiosity, driven by ambition
+            and committed to continuous growth.
+
+            Thank you for visiting EclipsePrince.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer class="site-footer">
+
+        <p>
+
+            © <span id="year"></span> EclipsePrince.
+
+            Beyond the ordinary. Built to stand apart.
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script src="js/script.js"></script>
+
+
+    <script>
+
+        // CONTACT FORM FUNCTIONALITY
+
+        const contactForm = document.getElementById("contactForm");
+
+        contactForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+
+            const email = document.getElementById("email").value.trim();
+
+            const subject = document.getElementById("subject").value.trim();
+
+            const message = document.getElementById("message").value.trim();
+
+
+            const recipient = "tristonc.petersen@gmail.com";
+
+            const emailSubject = encodeURIComponent(subject);
+
+            const emailBody = encodeURIComponent(
+                "Name: " + name +
+                "\nEmail: " + email +
+                "\n\nMessage:\n" + message
+            );
+
+
+            const mailtoLink =
+                "mailto:" + recipient +
+                "?subject=" + emailSubject +
+                "&body=" + emailBody;
+
+
+            window.location.href = mailtoLink;
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

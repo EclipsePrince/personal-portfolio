@@ -1,0 +1,909 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects | EclipsePrince</title>
+
+    <meta name="description" content="Explore the web development, IT and technical projects of EclipsePrince.">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           PROJECTS HERO
+        ========================= */
+
+        .projects-hero {
+            min-height: 55vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 8% 70px;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(109, 40, 217, 0.18),
+                    transparent 60%
+                );
+        }
+
+        .projects-hero-content {
+            max-width: 850px;
+        }
+
+        .projects-label {
+            color: #A78BFA;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .projects-hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(36px, 6vw, 68px);
+            color: #F5F5F5;
+            margin-bottom: 20px;
+        }
+
+        .projects-hero h1 span {
+            color: #A78BFA;
+        }
+
+        .projects-hero p {
+            color: #B8B8C5;
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+
+        /* =========================
+           INTRODUCTION
+        ========================= */
+
+        .projects-intro {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 50px 8% 70px;
+            text-align: center;
+        }
+
+        .projects-intro h2 {
+            font-family: 'Cinzel', serif;
+            color: #FFFFFF;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .projects-intro p {
+            color: #A7A7B5;
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+
+        /* =========================
+           PROJECTS SECTION
+        ========================= */
+
+        .projects-section {
+            padding: 80px 8%;
+            background: #0D0B12;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-heading .eyebrow {
+            color: #A78BFA;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .section-heading h2 {
+            font-family: 'Cinzel', serif;
+            color: #FFFFFF;
+            font-size: clamp(26px, 4vw, 38px);
+            margin-bottom: 15px;
+        }
+
+        .section-heading p {
+            color: #92909D;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           PROJECT GRID
+        ========================= */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 28px;
+            max-width: 1150px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: #15121C;
+            border: 1px solid rgba(167, 139, 250, 0.18);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+            border-color: #7C3AED;
+
+            box-shadow:
+                0 15px 40px rgba(109, 40, 217, 0.12);
+        }
+
+
+        /* =========================
+           PROJECT VISUALS
+        ========================= */
+
+        .project-image {
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(109, 40, 217, 0.3),
+                    #100D17 70%
+                );
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-symbol {
+            font-family: 'Cinzel', serif;
+            font-size: 65px;
+            color: #A78BFA;
+            text-shadow:
+                0 0 25px rgba(167, 139, 250, 0.4);
+        }
+
+        .project-image.portfolio-image {
+            background:
+                linear-gradient(
+                    135deg,
+                    #17131F,
+                    #29164A,
+                    #08080B
+                );
+        }
+
+        .project-image.dkd-image {
+            background:
+                linear-gradient(
+                    135deg,
+                    #08080B,
+                    #25202C,
+                    #100D17
+                );
+        }
+
+        .project-image.cyber-image {
+            background:
+                linear-gradient(
+                    135deg,
+                    #08080B,
+                    #151A29,
+                    #25143B
+                );
+        }
+
+
+        /* =========================
+           PROJECT CONTENT
+        ========================= */
+
+        .project-content {
+            padding: 28px;
+        }
+
+        .project-status {
+            display: inline-block;
+            padding: 7px 11px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 18px;
+        }
+
+        .status-development {
+            color: #C4B5FD;
+            background: rgba(109, 40, 217, 0.15);
+            border: 1px solid rgba(167, 139, 250, 0.25);
+        }
+
+        .status-learning {
+            color: #D1D5DB;
+            background: rgba(156, 163, 175, 0.1);
+            border: 1px solid rgba(156, 163, 175, 0.2);
+        }
+
+        .project-content h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 21px;
+            color: #FFFFFF;
+            margin-bottom: 15px;
+        }
+
+        .project-content > p {
+            color: #A7A7B5;
+            font-size: 14px;
+            line-height: 1.9;
+            margin-bottom: 22px;
+        }
+
+
+        /* =========================
+           TECHNOLOGY TAGS
+        ========================= */
+
+        .project-technologies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-bottom: 25px;
+        }
+
+        .project-technologies span {
+            color: #C4B5FD;
+            background: rgba(109, 40, 217, 0.12);
+            border: 1px solid rgba(167, 139, 250, 0.2);
+            padding: 7px 10px;
+            border-radius: 5px;
+            font-size: 11px;
+        }
+
+
+        /* =========================
+           PROJECT LINKS
+        ========================= */
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 18px;
+            border-top: 1px solid #292333;
+            padding-top: 20px;
+        }
+
+        .project-links a {
+            text-decoration: none;
+            color: #A78BFA;
+            font-size: 13px;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .project-links a:hover {
+            color: #FFFFFF;
+        }
+
+        .project-links .disabled-link {
+            color: #777381;
+            cursor: default;
+        }
+
+
+        /* =========================
+           DEVELOPMENT APPROACH
+        ========================= */
+
+        .approach-section {
+            padding: 85px 8%;
+        }
+
+        .approach-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .approach-card {
+            background: #111019;
+            border: 1px solid #292333;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .approach-card h3 {
+            color: #FFFFFF;
+            font-family: 'Cinzel', serif;
+            font-size: 17px;
+            margin-bottom: 13px;
+        }
+
+        .approach-card p {
+            color: #9996A5;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           CTA SECTION
+        ========================= */
+
+        .projects-cta {
+            padding: 90px 8%;
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(109, 40, 217, 0.15),
+                    transparent 65%
+                );
+        }
+
+        .projects-cta h2 {
+            font-family: 'Cinzel', serif;
+            color: #FFFFFF;
+            font-size: clamp(25px, 4vw, 38px);
+            margin-bottom: 18px;
+        }
+
+        .projects-cta p {
+            color: #A7A7B5;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .projects-cta a {
+            display: inline-block;
+            text-decoration: none;
+            color: #FFFFFF;
+            background: #6D28D9;
+            padding: 14px 28px;
+            border-radius: 5px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: 0.3s ease;
+        }
+
+        .projects-cta a:hover {
+            background: #7C3AED;
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .approach-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 550px) {
+
+            .projects-hero {
+                min-height: 45vh;
+                padding-top: 90px;
+            }
+
+            .project-content {
+                padding: 22px;
+            }
+
+            .project-content h3 {
+                font-size: 19px;
+            }
+
+            .project-image {
+                height: 190px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <header class="site-header">
+
+        <div class="brand">
+
+            <a href="index.html">
+
+                <img
+                    src="images/eclipseprince-logo.png"
+                    alt="EclipsePrince Logo"
+                >
+
+                <span>ECLIPSEPRINCE</span>
+
+            </a>
+
+        </div>
+
+
+        <button
+            class="menu-toggle"
+            aria-label="Open navigation"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+
+        <nav class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="skills.html">Skills</a>
+
+            <a href="projects.html" class="active">Projects</a>
+
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================= -->
+
+    <section class="projects-hero">
+
+        <div class="projects-hero-content">
+
+            <div class="projects-label">
+                My Work & Development
+            </div>
+
+            <h1>
+                Projects & <span>Creations.</span>
+            </h1>
+
+            <p>
+                A collection of projects, experiments and practical
+                work that represent my journey through technology,
+                development and continuous learning.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         INTRODUCTION
+    ========================= -->
+
+    <section class="projects-intro">
+
+        <h2>Turning Ideas Into Reality.</h2>
+
+        <p>
+            I believe practical experience is one of the most
+            effective ways to develop technical knowledge.
+
+            Every project gives me an opportunity to experiment,
+            solve problems, develop new skills and understand
+            how technology works in real-world environments.
+
+            This page documents that journey.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         PROJECT COLLECTION
+    ========================= -->
+
+    <section class="projects-section">
+
+        <div class="section-heading">
+
+            <div class="eyebrow">
+                Selected Work
+            </div>
+
+            <h2>My Projects</h2>
+
+            <p>
+                Development work and technical projects.
+            </p>
+
+        </div>
+
+
+
+        <div class="projects-grid">
+
+
+            <!-- PROJECT 01: PERSONAL PORTFOLIO -->
+
+            <article class="project-card">
+
+                <div class="project-image portfolio-image">
+
+                    <img
+                        src="images/eclipseprince-logo.png"
+                        alt="EclipsePrince portfolio logo"
+                    >
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <span class="project-status status-development">
+                        In Development
+                    </span>
+
+                    <h3>Personal Web Portfolio</h3>
+
+                    <p>
+                        A personal portfolio website created to
+                        establish my digital identity and showcase
+                        my technical skills, projects and professional
+                        development journey.
+
+                        The website features a responsive layout
+                        and a custom dark visual identity.
+                    </p>
+
+
+                    <div class="project-technologies">
+
+                        <span>HTML5</span>
+
+                        <span>CSS3</span>
+
+                        <span>JavaScript</span>
+
+                        <span>GitHub</span>
+
+                    </div>
+
+
+                    <div class="project-links">
+
+                        <a href="index.html">
+                            View Website →
+                        </a>
+
+                        <a
+                            href="https://github.com/YOUR_USERNAME/YOUR_REPOSITORY"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub Repository →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PROJECT 02: DKD NATION -->
+
+            <article class="project-card">
+
+                <div class="project-image dkd-image">
+
+                    <div class="project-symbol">
+                        <img
+                        src="images/file_000000005d4c8208aad759bfbf2085dc (1).png"
+                        alt="EclipsePrince portfolio logo"
+                    >
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <span class="project-status status-development">
+                        In Development
+                    </span>
+
+                    <h3>DKD NATION E-Commerce</h3>
+
+                    <p>
+                        An e-commerce website project for DKD NATION,
+                        an independent South African streetwear brand.
+
+                        The project focuses on creating an online
+                        shopping experience with product management,
+                        customer accounts, inventory and database
+                        functionality.
+                    </p>
+
+
+                    <div class="project-technologies">
+
+                        <span>HTML5</span>
+
+                        <span>CSS3</span>
+
+                        <span>JavaScript</span>
+
+                        <span>Python</span>
+
+                        <span>Flask</span>
+
+                        <span>SQLite</span>
+
+                    </div>
+
+
+                    <div class="project-links">
+
+                        <a href="https://eclipseprince.github.io/dkd-nation-ecommerce/">
+                            View Website →
+                        </a>
+
+
+                        <a
+                            href="https://eclipseprince.github.io/dkd-nation-ecommerce/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub Repository →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PROJECT 03: CYBERSECURITY -->
+
+            <article class="project-card">
+
+                <div class="project-image cyber-image">
+
+                    <div class="project-symbol">
+                        EP
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <span class="project-status status-learning">
+                        Learning & Exploration
+                    </span>
+
+                    <h3>Cybersecurity & Technical Labs</h3>
+
+                    <p>
+                        A developing collection of technical
+                        experiments focused on understanding
+                        operating systems, networking, system
+                        security and cybersecurity fundamentals.
+
+                        The goal is to build practical knowledge
+                        through structured learning and safe
+                        laboratory environments.
+                    </p>
+
+
+                    <div class="project-technologies">
+
+                        <span>Linux</span>
+
+                        <span>Virtual Machines</span>
+
+                        <span>Networking</span>
+
+                        <span>Security Fundamentals</span>
+
+                    </div>
+
+
+                    <div class="project-links">
+
+                        <span class="disabled-link">
+                            Documentation Coming Soon
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         DEVELOPMENT APPROACH
+    ========================= -->
+
+    <section class="approach-section">
+
+        <div class="approach-content">
+
+            <div class="section-heading">
+
+                <div class="eyebrow">
+                    My Philosophy
+                </div>
+
+                <h2>How I Approach Projects.</h2>
+
+                <p>
+                    Every project is an opportunity to improve.
+                </p>
+
+            </div>
+
+
+            <div class="approach-grid">
+
+
+                <div class="approach-card">
+
+                    <h3>01. Understand</h3>
+
+                    <p>
+                        Start by understanding the problem,
+                        defining the objective and identifying
+                        the technologies needed.
+                    </p>
+
+                </div>
+
+
+                <div class="approach-card">
+
+                    <h3>02. Build</h3>
+
+                    <p>
+                        Apply technical knowledge, experiment
+                        with solutions and develop practical
+                        implementations.
+                    </p>
+
+                </div>
+
+
+                <div class="approach-card">
+
+                    <h3>03. Improve</h3>
+
+                    <p>
+                        Test the results, identify areas for improvement and continue developing the project.
+                    </p>
+                  
+                </div>
+            </div>
+      </section>
+
+      <!-- =========================
+         CALL TO ACTION
+    ========================= -->
+
+    <section class="projects-cta">
+
+        <h2>Every Project Starts Somewhere.</h2>
+
+        <p>
+            My journey is ongoing. I am always learning,
+            experimenting and building something new.
+            Interested in connecting or collaborating.
+        </p>
+
+        <a href="contact.html">
+            GET IN TOUCH
+        </a>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer class="site-footer">
+
+        <p>
+            © <span id="year"></span> EclipsePrince.
+            Beyond the ordinary. Built to stand apart.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
+
+  
+
+                  
+
+                  
